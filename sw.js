@@ -1,8 +1,8 @@
 // Keeps a copy of the photo frame's own files on the iPad so it opens without internet.
 // (Your photos are not here - they live in the on-device database.)
 // Change the version number when you upload new versions of the files.
-const CACHE = 'photoframe-v1';
-const FILES = ['./', './index.html', './app.js', './style.css', './manifest.webmanifest', './icon-180.png', './icon-512.png'];
+const CACHE = 'photoframe-v2';
+const FILES = ['./', './index.html', './app.js', './scenes.js', './clock.js', './style.css', './manifest.webmanifest', './icon-180.png', './icon-512.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
